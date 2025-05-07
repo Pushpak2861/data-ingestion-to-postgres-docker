@@ -22,6 +22,13 @@ This project reads large data files in chunks using `pandas`, processes them ite
 - `psycopg2-binary` (PostgreSQL driver)
 
 ---
+---
+
+## Workflow
+
+![Data Ingestion workflow](media/pg_admin.gif)
+
+---
 ```
 
 ## Contributing
