@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  upload_data:
+    container_name: data_ingestion
+    build: 
+      context: .
+      dockerfile: dockerfile
+    environment:
+      - .env
+    volumes:
+      - ./upload_data.py:/app/upload_data.py
+    command: >
+      python upload_data.py
+      --user ${USER}
+      --password ${PASSWORD}
+      --data_base ${DATABASE}
+      --table ${TABLE}
+      --csv_file_api ${CSV_URL}
+  
+      

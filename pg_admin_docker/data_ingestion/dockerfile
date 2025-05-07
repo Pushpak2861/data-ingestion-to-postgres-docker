@@ -1,0 +1,10 @@
+FROM python:3.9.1
+
+WORKDIR /app
+
+COPY requirements.txt requirements.txt
+
+COPY upload_data.py upload_data.py
+
+RUN pip install -r requirements.txt
+#CMD [ "python" , "upload_data.py" ]
